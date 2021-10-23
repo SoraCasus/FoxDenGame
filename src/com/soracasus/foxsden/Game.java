@@ -7,7 +7,7 @@ import java.awt.image.BufferStrategy;
 
 public class Game implements Runnable {
 
-	private static final String GAME_TITLE = "";
+	private static final String GAME_TITLE = "Test Title";
 	private static final int GAME_WIDTH = 1920;
 	private static final int GAME_HEIGHT = 1080;
 
@@ -45,8 +45,11 @@ public class Game implements Runnable {
 		_graphics = _bufferStrategy.getDrawGraphics();
 
 		// Clear the screen
-		_graphics.fillRect( 0, 0, GAME_WIDTH, GAME_HEIGHT );
+		_graphics.clearRect( 0, 0, GAME_WIDTH, GAME_HEIGHT );
 		// Begin rendering here
+
+		_graphics.setColor( Color.BLUE );
+		_graphics.fillRect( 100, 100, 500, 500 );
 
 		// End rendering
 		// Swap the buffers
