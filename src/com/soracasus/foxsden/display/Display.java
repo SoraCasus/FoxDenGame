@@ -8,9 +8,10 @@ public class Display {
 	private JFrame _frame;
 	private Canvas _canvas;
 
-	private String _title;
-	private int _width;
-	private int _height;
+	// Note: These are final until customization is available
+	private final String _title;
+	private final int _width;
+	private final int _height;
 
 	/**
 	 * Represents the window in which the game is executed in
