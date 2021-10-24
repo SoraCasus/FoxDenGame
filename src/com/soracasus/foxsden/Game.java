@@ -1,9 +1,11 @@
 package com.soracasus.foxsden;
 
 import com.soracasus.foxsden.display.Display;
+import com.soracasus.foxsden.graphics.Assets;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
+import java.awt.image.BufferedImage;
 
 public class Game implements Runnable {
 
@@ -47,9 +49,8 @@ public class Game implements Runnable {
 		// Clear the screen
 		_graphics.clearRect( 0, 0, GAME_WIDTH, GAME_HEIGHT );
 		// Begin rendering here
-
-		_graphics.setColor( Color.BLUE );
-		_graphics.fillRect( 100, 100, 500, 500 );
+		BufferedImage image = Assets.GetInstance().GetTexture( "textures/test.png" );
+		_graphics.drawImage( image, 100, 100, null);
 
 		// End rendering
 		// Swap the buffers

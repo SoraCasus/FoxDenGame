@@ -11,7 +11,7 @@ public class Log {
 
 		1. Check to see if the current log level allows the print
 		2. Format the string to fit the requirements
-			"[Date Time] [LEVEL] Messsage"
+			"[Date Time] [LEVEL] Message"
 			"[ 23-08-2021 25:38:42.943 ] [ INFO ] This is an info message"
 			"[ 23-08-2021 25:38:42.943 ] [ DEBUG ] This is an debug message"
 			"[ 23-08-2021 25:38:42.943 ] [ ERROR ] This is an error message"
