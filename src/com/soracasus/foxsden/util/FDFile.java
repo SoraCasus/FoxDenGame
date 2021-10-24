@@ -39,10 +39,15 @@ public class FDFile {
 		return new BufferedReader( new InputStreamReader( GetIStream(), StandardCharsets.UTF_8 ) );
 	}
 
-	public OutputStream GetOStream() throws IOException {
+	public FileOutputStream GetOStream() throws IOException {
 		File file = new File( _path );
+		//noinspection ResultOfMethodCallIgnored
 		file.createNewFile();
 		return new FileOutputStream( file );
+	}
+
+	public BufferedWriter GetWriter() throws IOException {
+		return new BufferedWriter( new FileWriter( _path.substring( 1 ) ) );
 	}
 
 	public String GetPath() {
