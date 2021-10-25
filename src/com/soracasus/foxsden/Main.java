@@ -1,25 +1,29 @@
 package com.soracasus.foxsden;
 
-import com.soracasus.foxsden.log.Log;
-import com.soracasus.foxsden.util.FDFile;
-
-import java.io.BufferedWriter;
-import java.io.FileOutputStream;
-import java.io.IOException;
-
 public class Main {
 
 	public static void main( String[] args ) {
 
-		FDFile log = new FDFile( "tmp.log" );
-		try ( BufferedWriter writer = log.GetWriter() ) {
-			writer.write( "This is a test message" );
-		} catch ( IOException e ) {
-			e.printStackTrace();
+		for( String s : args ) {
+			if( s.equalsIgnoreCase( "-countframes" ) ) {
+				Game.COUNT_FRAMES = true;
+			} else {
+				PrintHelp();
+				System.exit( 0 );
+			}
 		}
-
 		Game game = new Game();
 		game.Start();
+	}
+
+	private static void PrintHelp() {
+		String sb = """
+				Command line arguments:\s
+				\t -help \t Prints this help screen\s
+				\t -countframes \t Prints the number of frames rendered in a second\s
+				""";
+
+		System.out.println( sb );
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.soracasus.foxsden.log;
+package com.soracasus.foxsden.util.log;
 
 /**
  * A singleton class to manage and handle all the logging needed

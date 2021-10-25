@@ -1,4 +1,4 @@
-package com.soracasus.foxsden.log;
+package com.soracasus.foxsden.util.log;
 
 public enum LogLevel {
 
